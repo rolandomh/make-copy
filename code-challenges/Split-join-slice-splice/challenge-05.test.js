@@ -7,6 +7,7 @@ const cheerio = require('cheerio');
 CHALLENGE 1 - Review
 Write a function named templateWithJQuery that uses jQuery to get the html template from the DOM, copy the contents, fill it with the Star Wars People, and append it to the DOM.
 ------------------------------------------------------------------------------------------------ */
+
 let starWarsPeople = [
   {
     "name": "Luke Skywalker",
@@ -46,6 +47,8 @@ const templateWithJQuery = () => {
   });
 };
 
+
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 Write a function named howMuchPencil that takes in a string, as written on the side of a pencil.
@@ -57,6 +60,7 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
+  // Solution code here...
   for (let i = 0; i <= str.length; i++) {
     let slice = str.slice(i);
     result.push(slice);
@@ -71,6 +75,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
+  // Solution code here...
   let result = [];
   for (let i = 0; i < arr.length; i++) {
     let char = arr.charAt(i);
@@ -78,7 +83,6 @@ const wordsToCharList = (arr) => {
   }
   return result;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -119,6 +123,7 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
+  // Solution code here...
   recipe.ingredients.forEach(ingredient => {
     //console.log(ingredient)
     let ingArray = ingredient.split(' ');
@@ -331,6 +336,6 @@ xdescribe('Testing challenge 11', () => {
 });
 
 
-function createSnippetWithJQuery(html) {
+function createSnippetWithJQuery(html){
   return cheerio.load(html);
 };
